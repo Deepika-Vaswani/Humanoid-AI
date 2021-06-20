@@ -1,0 +1,172 @@
+/* about css */
+.bg-dark{
+	background-color:rgba(83, 81, 81, 0.103);
+	color: #030303;
+}
+#who{
+	display: flex;
+	padding: 2rem 0;
+	justify-content: space-between;
+    margin-top: 1px;
+    height: 100vh;
+	
+  }
+
+  #who div{
+	flex: 1;		
+  }
+  .m-heading{
+      color: black;
+    font-size: 3em;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    text-justify: newspaper;
+}
+h1{
+    color: black;
+    font-weight: 700;
+    font-size: 3rem;
+}
+h1 span {
+    color: #08e438;
+}
+.who-text p{
+    margin-top: 10%;
+     font-size: 2rem;
+     font-weight: 400;
+     text-justify: newspaper;
+ } 
+  #who .who-img{
+
+	background: url('../img/robo/lovingAI.jpg') no-repeat center center/cover;
+	margin-right: 5px;
+  }
+  #who .who-img:hover{
+	filter: drop-shadow(0px 0px 10px rgb(161, 255, 174));
+  }
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+
+
+#rig {
+    z-index: 1;
+    max-width:1500px;
+    margin:0 auto; /*center aligned*/
+    top: 5px;
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    background-color:rgba(83, 81, 81, 0.103);
+}
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    margin:10px;
+    box-shadow:transparent;
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(70, 67, 67, 0.733) url(img/link.png) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bolder!important;
+    line-height: 5px;
+    top:40%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+
+
+
+
+
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
+    }
+}
